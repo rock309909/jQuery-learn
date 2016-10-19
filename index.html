@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Jquery</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
+<script type="text/javascript" src="javascript/ls.js"></script>
+<script type="text/javascript" src="javascript/jquery-3.1.0.js"></script>
+<script>
+
+($( document ).ready(function() {
+
+	// Выпадающее меню
+	var menu = [	'Главная',
+					'Вторая',
+					'Третья',
+					'Четвертая'],
+	menuNav = $('nav ul li');
+	
+	function menuFunc (menu) {
+		if (menu[0]) {
+			var i = 0;
+			for ( i; i < menu.length; i++ ) {
+				$('nav ul').append('<li><a href="#">' + menu[i] + '</li>')
+			}	
+		} else {menu[0] = ''}// конец проверки на наличие значений в меню
+		return menu; 
+	} // конец ф-ии menuFun
+
+//цвета или фоновый рисунок блоков
+$('header').css("background-color", "#5882FA");
+
+menuFunc (menu) 
+//console.log($('header'));
+	
+
+
+	})
+)();	
+
+</script>
+<body>
+<header>
+<div id="up">практика по jQury без гита а теперь с гитом
+<p>Новое изменение файла</p>
+</div>
+</header>
+<nav id="menu_bar" >
+	<ul class="nav nav-tabs">
+		<!--
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Вторая</a></li>
+		<li><a href="#">О себе</a></li>
+		<li><a href="#">Четвертая</a></li>
+		-->
+	</ul>
+	
+
+</nav>
+<div id="left"></div>
+Левая часть страницы
+<div id="center"></div>
+Центральная часть страницы
+<div id="right"></div>
+Правая часть страницы
+<div id="left"></div>
+<footer>
+<div id="bottom"></div>
+Нижняя часть страницы
+</footer>
+
+
+<script>
+($('document').ready(function() {
+console.log($('body'));
+})
+)();
+</script>>
+</body>
+</html>
